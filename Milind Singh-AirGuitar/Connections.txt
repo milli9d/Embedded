@@ -1,0 +1,13 @@
+ADXL343:
+
+
+PIN<--- Input
+
+Vin
+Gnd
+SCL<--SCL0 
+SDA<--SDA0
+SDO/Alt.Address<---- Gnd
+CS<--- Vdd
+INT1 <--- Pin1 GPIO
+INT2 <--- Pin2 GPIO
