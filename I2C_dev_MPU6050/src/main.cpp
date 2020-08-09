@@ -2,6 +2,12 @@
 #include <MPU6050.h>
 #include <Serial.h>
 
+int sum(int a,int b);
+
+
+int sum(int a,int b)
+
+
 
 int main()
 {
@@ -9,9 +15,9 @@ int main()
   // Make new MPU Object
   MPU6050 *mpu = new MPU6050();
   Serial *debug = new Serial(USBTX, USBRX);
-
+  
   while (1)
-  {
+  {z
     // Test connection to MPU , if found then inititalize MPU
     if (mpu->testConnection())
     {
@@ -36,6 +42,7 @@ int main()
     // Get Acceleration , read pointers to use this function , you need to enter pointers to buffers in getAcceleration as parameters
     int16_t acc_x, acc_y, acc_z;
     mpu->getAcceleration(&acc_x, &acc_y, &acc_z);
+    
     // Calculate result from 2's Complement form
     accel_x = acc_x / 16384.0f;
     accel_y = acc_y / 16384.0f;
